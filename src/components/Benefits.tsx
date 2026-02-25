@@ -1,6 +1,7 @@
 "use client";
 
 import { C, S } from "@/lib/tokens";
+import { useIsMobile } from "@/lib/useIsMobile";
 
 const BENEFITS = [
   {
@@ -30,12 +31,14 @@ const BENEFITS = [
 ] as const;
 
 export default function Benefits() {
+  const isMobile = useIsMobile();
+
   return (
-    <section id="beneficios" style={{ ...S.section, background: C.offWhite }}>
+    <section id="beneficios" style={{ ...S.section, padding: isMobile ? "72px 24px" : "88px 28px", background: C.offWhite }}>
       <div style={S.container}>
 
         {/* ── Eyebrow + title ── */}
-        <div style={{ marginBottom: 52 }}>
+        <div style={{ marginBottom: 40 }}>
           <span style={S.eyebrow}>Beneficios</span>
           <h2 style={{ ...S.sectionTitle, fontSize: "clamp(28px, 3vw, 40px)", maxWidth: 480 }}>
             Por qué las notarías eligen nominds
@@ -62,7 +65,7 @@ export default function Benefits() {
             <div
               key={i}
               style={{
-                padding: "36px 32px",
+                padding: isMobile ? "20px 12px" : "36px 32px",
                 borderRight: i < 2 ? `1px solid ${C.border}` : "none",
                 display: "flex", flexDirection: "column", justifyContent: "space-between",
               }}
@@ -70,26 +73,26 @@ export default function Benefits() {
               <div
                 style={{
                   fontFamily: "'NeueHaas', 'Helvetica Neue', sans-serif",
-                  fontSize: "clamp(48px, 5vw, 68px)",
+                  fontSize: isMobile ? "clamp(28px, 7vw, 44px)" : "clamp(48px, 5vw, 68px)",
                   fontWeight: 500,
-                  letterSpacing: "-3px",
+                  letterSpacing: isMobile ? "-1.5px" : "-3px",
                   lineHeight: 1,
                   color: C.dark,
-                  marginBottom: 16,
+                  marginBottom: isMobile ? 8 : 16,
                 }}
               >
                 {m.value}<span style={{ color: C.green }}>{m.unit}</span>
               </div>
               <div>
-                <div style={{ fontSize: 13.5, fontWeight: 600, color: C.dark2, marginBottom: 3 }}>{m.label}</div>
-                <div style={{ fontSize: 12, color: C.muted, fontWeight: 300 }}>{m.sub}</div>
+                <div style={{ fontSize: isMobile ? 11 : 13.5, fontWeight: 600, color: C.dark2, marginBottom: 2 }}>{m.label}</div>
+                {!isMobile && <div style={{ fontSize: 12, color: C.muted, fontWeight: 300 }}>{m.sub}</div>}
               </div>
             </div>
           ))}
         </div>
 
         {/* ── Bottom: 4 benefits grid + testimonial ── */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: 20 }}>
 
           {/* Left: 2×2 benefit blocks */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
@@ -156,79 +159,62 @@ export default function Benefits() {
             style={{
               background: C.dark,
               borderRadius: 16,
-              padding: "36px 32px",
+              padding: "20px 22px 18px",
               display: "flex", flexDirection: "column", justifyContent: "space-between",
             }}
           >
-            {/* top label */}
-            <div
-              style={{
-                display: "inline-flex", alignItems: "center", gap: 7,
+            {/* top: badge + quote */}
+            <div>
+              {/* badge */}
+              <div style={{
+                display: "inline-flex", alignItems: "center", gap: 6,
                 background: "rgba(76,175,122,0.12)",
-                border: "1px solid rgba(76,175,122,0.2)",
-                borderRadius: 20, padding: "4px 12px",
-                width: "fit-content", marginBottom: 28,
-              }}
-            >
-              <div style={{ width: 6, height: 6, borderRadius: "50%", background: C.scan }} />
-              <span style={{ fontSize: 10.5, fontWeight: 600, color: C.scan, letterSpacing: "0.5px" }}>
-                Caso real · Notaría 19
-              </span>
-            </div>
-
-            {/* quote */}
-            <div style={{ flex: 1 }}>
-              <div
-                style={{
-                  fontFamily: "Georgia, serif",
-                  fontSize: 52, lineHeight: 0.8,
-                  color: "rgba(76,175,122,0.25)",
-                  marginBottom: 12,
-                  userSelect: "none",
-                }}
-              >
-                &ldquo;
+                border: `1px solid rgba(76,175,122,0.2)`,
+                borderRadius: 20, padding: "3px 10px",
+                marginBottom: 12,
+              }}>
+                <div style={{ width: 5, height: 5, borderRadius: "50%", background: C.scan }} />
+                <span style={{ fontSize: 10, fontWeight: 600, color: C.scan, letterSpacing: "0.5px" }}>
+                  Caso real · Notaría 29
+                </span>
               </div>
-              <p
-                style={{
-                  fontSize: 16,
-                  color: "rgba(255,255,255,0.88)",
-                  lineHeight: 1.7,
-                  fontWeight: 300,
-                  margin: 0,
-                }}
-              >
-                Antes perdíamos horas capturando datos de expedientes. Con nominds,
-                procesamos el triple de trámites con el mismo equipo.
+
+              {/* quote */}
+              <p style={{
+                fontSize: 13.5,
+                color: "rgba(250,250,248,0.75)",
+                lineHeight: 1.6,
+                fontWeight: 300,
+                margin: 0,
+                fontStyle: "italic",
+              }}>
+                "Antes perdíamos horas capturando datos de expedientes. Con nominds,
+                procesamos el triple de trámites con el mismo equipo."
               </p>
             </div>
 
             {/* bottom attribution */}
-            <div
-              style={{
-                marginTop: 32,
-                paddingTop: 20,
-                borderTop: "1px solid rgba(255,255,255,0.1)",
-                display: "flex", justifyContent: "space-between", alignItems: "flex-end",
-              }}
-            >
+            <div style={{
+              marginTop: 14,
+              paddingTop: 12,
+              borderTop: "1px solid rgba(255,255,255,0.1)",
+              display: "flex", justifyContent: "space-between", alignItems: "center",
+            }}>
               <div>
-                <div style={{ fontSize: 13, fontWeight: 600, color: "white", marginBottom: 2 }}>
-                  Notaría 19
+                <div style={{ fontSize: 12.5, fontWeight: 600, color: "rgba(250,250,248,0.85)", marginBottom: 2 }}>
+                  Notaría 29
                 </div>
-                <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.4)" }}>
-                  Ciudad de México
+                <div style={{ fontSize: 11, color: "rgba(250,250,248,0.35)", fontWeight: 300 }}>
+                  Monterrey, Nuevo León
                 </div>
               </div>
-              <div
-                style={{
-                  fontFamily: "'NeueHaas', 'Helvetica Neue', sans-serif",
-                  fontSize: 32, fontWeight: 500,
-                  letterSpacing: "-1.5px",
-                  color: C.scan,
-                  lineHeight: 1,
-                }}
-              >
+              <div style={{
+                fontFamily: "'NeueHaas', 'Helvetica Neue', sans-serif",
+                fontSize: 26, fontWeight: 500,
+                letterSpacing: "-1px",
+                color: C.scan,
+                lineHeight: 1,
+              }}>
                 3×
               </div>
             </div>
