@@ -7,7 +7,7 @@ import { useIsMobile } from "@/lib/useIsMobile";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
+  const isMobile = useIsMobile(1024);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);

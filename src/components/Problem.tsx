@@ -185,7 +185,7 @@ function Column({ side, steps }: { side: "before" | "after"; steps: typeof BEFOR
                 </div>
                 <div style={{
                   fontSize: 11.5,
-                  color: "rgba(255,255,255,0.22)",
+                  color: "rgba(255,255,255,0.5)",
                 }}>
                   {s.sub}
                 </div>
@@ -204,7 +204,7 @@ export default function Problem() {
   const isMobile = useIsMobile();
 
   return (
-    <section style={{ ...S.section, padding: isMobile ? "72px 24px" : "96px 28px", background: C.dark, position: "relative", overflow: "hidden" }}>
+    <section style={{ ...S.section, padding: isMobile ? "32px 24px" : "48px 28px", background: C.dark, position: "relative", overflow: "hidden" }}>
       {/* bg glow */}
       <div style={{
         position: "absolute", top: "50%", left: "50%",
@@ -217,7 +217,7 @@ export default function Problem() {
       <div style={S.container}>
 
         {/* Header */}
-        <div style={{ marginBottom: 40, maxWidth: 640 }}>
+        <div style={{ marginBottom: 24, maxWidth: 640 }}>
           <span style={S.eyebrow}>El problema actual</span>
           <h2 style={{
             ...S.sectionTitle,
@@ -231,7 +231,7 @@ export default function Problem() {
           }}>
             Tu equipo dedica horas a lo que la IA hace en segundos
           </h2>
-          <p style={{ fontSize: 15.5, color: "rgba(250,250,248,0.38)", fontWeight: 300, lineHeight: 1.7 }}>
+          <p style={{ fontSize: 15.5, color: "rgba(250,250,248,0.65)", fontWeight: 300, lineHeight: 1.7 }}>
             Cada expediente procesado a mano es tiempo, dinero y riesgo de error. nominds lo cambia todo.
           </p>
         </div>
@@ -269,7 +269,7 @@ export default function Problem() {
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)",
-          marginTop: 20,
+          marginTop: 12,
           background: "rgba(255,255,255,0.03)",
           borderRadius: 14,
           border: "1px solid rgba(255,255,255,0.06)",
@@ -295,7 +295,7 @@ export default function Problem() {
               }}>
                 {n}
               </div>
-              <div style={{ fontSize: isMobile ? 11 : 12.5, color: "rgba(255,255,255,0.3)", fontWeight: 400 }}>
+              <div style={{ fontSize: isMobile ? 11 : 12.5, color: "rgba(255,255,255,0.55)", fontWeight: 400 }}>
                 {label}
               </div>
             </div>

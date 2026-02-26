@@ -102,7 +102,7 @@ function UseCaseCard({ tag, title, desc, src, fields, variant }: (typeof CASES)[
       <div style={{ padding: "14px 18px 16px", flex: 1 }}>
         <div style={{
           display: "inline-flex", alignItems: "center",
-          background: C.sandL, color: C.warmGray,
+          background: C.sandL, color: C.dark2,
           fontSize: 10, fontWeight: 500,
           padding: "2px 8px", borderRadius: 20, marginBottom: 6,
         }}>
@@ -111,7 +111,7 @@ function UseCaseCard({ tag, title, desc, src, fields, variant }: (typeof CASES)[
         <div style={{ fontSize: 14, fontWeight: 600, color: C.dark, marginBottom: 4, lineHeight: 1.3 }}>
           {title}
         </div>
-        <div style={{ fontSize: 12.5, color: C.warmGray, lineHeight: 1.55, fontWeight: 300 }}>
+        <div style={{ fontSize: 12.5, color: C.dark2, lineHeight: 1.55, fontWeight: 300 }}>
           {desc}
         </div>
       </div>
@@ -123,7 +123,7 @@ export default function UseCases() {
   const isMobile = useIsMobile();
 
   return (
-    <section id="casos" style={{ ...S.section, padding: isMobile ? "72px 24px" : "96px 28px" }}>
+    <section id="casos" style={{ ...S.section, padding: isMobile ? "32px 24px" : "48px 28px" }}>
       <div style={S.container}>
         <span style={S.eyebrow}>Casos de uso</span>
         <h2 style={{

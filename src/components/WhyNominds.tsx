@@ -54,7 +54,7 @@ export default function WhyNominds() {
   const isMobile = useIsMobile();
 
   return (
-    <section id="porque" style={{ ...S.section, padding: isMobile ? "72px 24px" : "88px 28px", background: "white" }}>
+    <section id="porque" style={{ ...S.section, padding: isMobile ? "32px 24px" : "48px 28px", background: "white" }}>
       <div style={S.container}>
 
         {/* ── Header row ── */}
@@ -142,7 +142,7 @@ export default function WhyNominds() {
                   fontSize: 10.5, fontWeight: 600,
                   textTransform: "uppercase" as const,
                   letterSpacing: "0.8px",
-                  color: i === 1 ? "rgba(255,255,255,0.45)" : C.muted,
+                  color: i === 1 ? "rgba(255,255,255,0.65)" : C.dark2,
                   marginBottom: 18,
                 }}
               >
@@ -173,7 +173,7 @@ export default function WhyNominds() {
               <div
                 style={{
                   fontSize: 12.5, fontWeight: 300,
-                  color: i === 1 ? "rgba(255,255,255,0.6)" : C.warmGray,
+                  color: i === 1 ? "rgba(255,255,255,0.82)" : C.dark2,
                   lineHeight: 1.65,
                 }}
               >

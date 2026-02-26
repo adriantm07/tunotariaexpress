@@ -43,7 +43,7 @@ export default function FinalCTA() {
       id="contacto"
       style={{
         background: C.dark,
-        padding: isMobile ? "72px 24px" : "108px 28px",
+        padding: isMobile ? "32px 24px" : "48px 28px",
         position: "relative",
         overflow: "hidden",
       }}
@@ -109,7 +109,7 @@ export default function FinalCTA() {
               Procesa documentos legales de forma inteligente
             </h2>
 
-            <p style={{ fontSize: 15.5, color: "rgba(250,250,248,0.5)", fontWeight: 300, lineHeight: 1.6, margin: "0 0 28px", maxWidth: 400 }}>
+            <p style={{ fontSize: 15.5, color: "rgba(250,250,248,0.72)", fontWeight: 300, lineHeight: 1.6, margin: "0 0 28px", maxWidth: 400 }}>
               Déjanos tus datos y te mostramos nominds funcionando con tus documentos reales, sin compromiso.
             </p>
 
@@ -127,7 +127,7 @@ export default function FinalCTA() {
                     display: "flex", alignItems: "center", justifyContent: "center",
                     fontSize: 10, color: C.scan, fontWeight: 700,
                   }}>✓</div>
-                  <span style={{ fontSize: 13.5, color: "rgba(250,250,248,0.6)", fontWeight: 300 }}>{text}</span>
+                  <span style={{ fontSize: 13.5, color: "rgba(250,250,248,0.78)", fontWeight: 300 }}>{text}</span>
                 </div>
               ))}
             </div>
@@ -278,7 +278,7 @@ export default function FinalCTA() {
                 }}>
                   ¡Listo{form.nombre ? `, ${form.nombre.split(" ")[0]}` : ""}!
                 </h3>
-                <p style={{ fontSize: 14, color: "rgba(250,250,248,0.5)", lineHeight: 1.6, fontWeight: 300, margin: 0 }}>
+                <p style={{ fontSize: 14, color: "rgba(250,250,248,0.72)", lineHeight: 1.6, fontWeight: 300, margin: 0 }}>
                   Recibimos tu solicitud. Te contactamos en menos de 24 horas para agendar la demo.
                 </p>
               </div>

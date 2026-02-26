@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { C, SCAN_FIELDS, LASER_MS } from "@/lib/tokens";
+import { useIsMobile } from "@/lib/useIsMobile";
 
 type FieldId = (typeof SCAN_FIELDS)[number]["id"];
 type Phase = "idle" | "scanning" | "done";
@@ -386,6 +387,7 @@ export default function ScanAnimation({ autoPlay = true }: { autoPlay?: boolean 
   const { phase, litFields, outFields, run } = useAnimationCycle();
   const cardRef = useRef<HTMLDivElement>(null);
   const [cardH, setCardH] = useState(220);
+  const isMobile = useIsMobile(1024);
 
   useEffect(() => {
     if (cardRef.current) setCardH(cardRef.current.offsetHeight);
@@ -406,10 +408,10 @@ export default function ScanAnimation({ autoPlay = true }: { autoPlay?: boolean 
   }, [phase, run]);
 
   return (
-    <div style={{ display: "flex", alignItems: "flex-start", gap: 24, width: "100%" }}>
+    <div style={{ display: "flex", flexDirection: isMobile ? "column" : "row", alignItems: "flex-start", gap: isMobile ? 20 : 24, width: "100%" }}>
 
       {/* ── CARD SIDE ── */}
-      <div style={{ flexShrink: 0, position: "relative", width: 286 }}>
+      <div style={{ flexShrink: 0, position: "relative", width: isMobile ? "100%" : 286 }}>
         {/* status badge */}
         <div
           style={{

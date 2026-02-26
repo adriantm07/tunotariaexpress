@@ -34,7 +34,7 @@ export default function Benefits() {
   const isMobile = useIsMobile();
 
   return (
-    <section id="beneficios" style={{ ...S.section, padding: isMobile ? "72px 24px" : "88px 28px", background: C.offWhite }}>
+    <section id="beneficios" style={{ ...S.section, padding: isMobile ? "32px 24px" : "48px 28px", background: C.offWhite }}>
       <div style={S.container}>
 
         {/* ── Eyebrow + title ── */}
@@ -144,7 +144,7 @@ export default function Benefits() {
                   <div
                     style={{
                       fontSize: 12, fontWeight: 300, lineHeight: 1.55,
-                      color: i === 2 ? "rgba(255,255,255,0.65)" : C.warmGray,
+                      color: i === 2 ? "rgba(255,255,255,0.82)" : C.dark2,
                     }}
                   >
                     {b.desc}
@@ -182,7 +182,7 @@ export default function Benefits() {
               {/* quote */}
               <p style={{
                 fontSize: 13.5,
-                color: "rgba(250,250,248,0.75)",
+                color: "rgba(250,250,248,0.88)",
                 lineHeight: 1.6,
                 fontWeight: 300,
                 margin: 0,
@@ -204,7 +204,7 @@ export default function Benefits() {
                 <div style={{ fontSize: 12.5, fontWeight: 600, color: "rgba(250,250,248,0.85)", marginBottom: 2 }}>
                   Notaría 29
                 </div>
-                <div style={{ fontSize: 11, color: "rgba(250,250,248,0.35)", fontWeight: 300 }}>
+                <div style={{ fontSize: 11, color: "rgba(250,250,248,0.55)", fontWeight: 300 }}>
                   Monterrey, Nuevo León
                 </div>
               </div>

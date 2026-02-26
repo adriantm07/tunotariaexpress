@@ -99,7 +99,7 @@ function FeatureRow({ icon, title, desc }: { icon: React.ReactNode; title: strin
         </div>
         <div style={{
           fontSize: 13,
-          color: C.warmGray,
+          color: C.dark2,
           lineHeight: 1.6,
           fontWeight: 300,
         }}>
@@ -114,7 +114,7 @@ export default function Features() {
   const isMobile = useIsMobile();
 
   return (
-    <section id="producto-features" style={{ ...S.section, padding: isMobile ? "72px 24px" : "96px 28px" }}>
+    <section id="producto-features" style={{ ...S.section, padding: isMobile ? "32px 24px" : "48px 28px" }}>
       <div style={S.container}>
 
         {/* Header */}
@@ -176,7 +176,7 @@ export default function Features() {
 
               <p style={{
                 fontSize: 15,
-                color: "rgba(250,250,248,0.65)",
+                color: "rgba(250,250,248,0.8)",
                 lineHeight: 1.75,
                 fontWeight: 300,
               }}>
@@ -192,7 +192,7 @@ export default function Features() {
             }}>
               <p style={{
                 fontSize: 14.5,
-                color: "rgba(250,250,248,0.5)",
+                color: "rgba(250,250,248,0.75)",
                 fontStyle: "italic",
                 lineHeight: 1.65,
                 marginBottom: 16,
@@ -206,7 +206,7 @@ export default function Features() {
                   width: 28, height: 28, borderRadius: "50%",
                   background: "rgba(255,255,255,0.15)",
                 }} />
-                <div style={{ fontSize: 12, color: "rgba(250,250,248,0.55)", fontWeight: 400 }}>
+                <div style={{ fontSize: 12, color: "rgba(250,250,248,0.7)", fontWeight: 400 }}>
                   Notaría 29 · Monterrey
                 </div>
               </div>
