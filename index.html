@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Expedito — Tu trámite notarial, sin filas ni confusión</title>
-  <meta name="description" content="Expedito guía a ciudadanos mexicanos paso a paso para armar su expediente notarial en línea. Actas constitutivas, compraventa, donación y testamento en días, no meses." />
+  <title>TuNotariaExpress — Tu trámite notarial, sin filas ni confusión</title>
+  <meta name="description" content="TuNotariaExpress guía a ciudadanos mexicanos paso a paso para armar su expediente notarial en línea. Actas constitutivas, compraventa, donación y testamento en días, no meses." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
@@ -574,7 +574,7 @@
 
     .steps-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 0;
       position: relative;
     }
@@ -583,8 +583,8 @@
       content: '';
       position: absolute;
       top: 40px;
-      left: calc(12.5% + 24px);
-      right: calc(12.5% + 24px);
+      left: calc(10% + 24px);
+      right: calc(10% + 24px);
       height: 2px;
       background: linear-gradient(90deg, var(--secondary) 0%, var(--border) 100%);
       z-index: 0;
@@ -1123,7 +1123,9 @@
        RESPONSIVE
     =========================== */
     @media (max-width: 1024px) {
-      .steps-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+      .steps-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+      .steps-grid .step:nth-child(4) { grid-column: 1; }
+      .steps-grid .step:nth-child(5) { grid-column: 2; }
       .steps-grid::before { display: none; }
       .docs-grid { grid-template-columns: repeat(2, 1fr); }
       .tech-cols { grid-template-columns: 1fr 1fr; }
@@ -1187,7 +1189,7 @@
               <path d="M8 16v-5h4v5" stroke="#FAF7F2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          Expedito
+          TuNotariaExpress
         </a>
 
         <ul class="nav-links">
@@ -1270,7 +1272,7 @@
                   <path d="M4 16V8l6-4 6 4v8" stroke="#FAF7F2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M8 16v-5h4v5" stroke="#FAF7F2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                Expedito
+                TuNotariaExpress
               </div>
               <div class="pm-steps">
                 <span class="pm-step done">1</span>
@@ -1334,8 +1336,8 @@
     <div class="container">
       <div class="hiw-header">
         <div class="eyebrow reveal">Proceso</div>
-        <h2 class="section-title reveal reveal-delay-1">¿Cómo funciona Expedito?</h2>
-        <p class="section-subtitle reveal reveal-delay-2">Cuatro pasos simples. Sin oficinas, sin filas, sin tecnicismos. Tu notario hace el trabajo pesado; tú solo mandas tus documentos desde el celular.</p>
+        <h2 class="section-title reveal reveal-delay-1">¿Cómo funciona TuNotariaExpress?</h2>
+        <p class="section-subtitle reveal reveal-delay-2">Cinco pasos simples. Sin oficinas, sin filas, sin tecnicismos. Nuestra tecnología hace el trabajo pesado; tú solo verificas y llegas a firmar.</p>
       </div>
 
       <div class="steps-grid">
@@ -1350,46 +1352,61 @@
             </svg>
           </div>
           <h3 class="step-title">Elige tu trámite</h3>
-          <p class="step-desc">Entra a la plataforma, selecciona el tipo de procedimiento notarial que necesitas y revisa qué documentos vas a necesitar.</p>
+          <p class="step-desc">Entra a la plataforma y selecciona el procedimiento notarial que necesitas: compraventa, acta constitutiva, testamento y más.</p>
         </div>
 
         <div class="step reveal reveal-delay-1">
           <div class="step-num">
             <span class="num-label">2</span>
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <rect x="5" y="5" width="22" height="22" rx="4" stroke="var(--primary)" stroke-width="2"/>
-              <path d="M10 12h12M10 17h12M10 22h7" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M19 20l2 2 4-4" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 4H10a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V10l-7-6z" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 4v6h6" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/>
+              <path d="M20 20H12M16 16v8" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3 class="step-title">Llena el formulario paso a paso</h3>
-          <p class="step-desc">Un asistente inteligente te guía con preguntas simples en español cotidiano. Sin tecnicismos. A tu ritmo, desde cualquier dispositivo.</p>
+          <h3 class="step-title">Sube tus documentos</h3>
+          <p class="step-desc">La plataforma te indica exactamente qué documentos necesitas. Cárgalos desde tu celular o computadora en minutos.</p>
         </div>
 
         <div class="step reveal reveal-delay-2">
           <div class="step-num">
             <span class="num-label">3</span>
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <path d="M18 4H10a3 3 0 0 0-3 3v18a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V10l-7-6z" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M18 4v6h6" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/>
-              <path d="M12 19l2.5 2.5L20 16" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="5" y="5" width="22" height="22" rx="4" stroke="var(--primary)" stroke-width="2"/>
+              <path d="M10 12h12M10 17h9" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="23" cy="22" r="5" fill="#F5E8D8" stroke="var(--secondary)" stroke-width="1.6"/>
+              <path d="M21 22h4M23 20v4" stroke="var(--secondary)" stroke-width="1.4" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3 class="step-title">Sube tus documentos</h3>
-          <p class="step-desc">Carga tus documentos desde el celular o computadora. Nuestra tecnología los lee, extrae datos y arma tu expediente automáticamente.</p>
+          <h3 class="step-title">OCR extrae la información</h3>
+          <p class="step-desc">Nuestra tecnología de OCR lee cada documento, extrae los datos relevantes y llena automáticamente todos los campos del expediente.</p>
         </div>
 
         <div class="step reveal reveal-delay-3">
           <div class="step-num">
             <span class="num-label">4</span>
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <path d="M8 20s2-3 8-3 8 3 8 3" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="16" cy="11" r="5" stroke="var(--primary)" stroke-width="2"/>
-              <path d="M22 22l1.5 1.5 3-3" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="5" y="5" width="22" height="22" rx="4" stroke="var(--primary)" stroke-width="2"/>
+              <path d="M10 12h12M10 17h12M10 22h7" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M19 20l2 2 4-4" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
-          <h3 class="step-title">Solo ve a firmar</h3>
-          <p class="step-desc">Agenda tu cita con el notario en minutos. Tu expediente llega completo y verificado. Solo llegas a firmar. Nada más.</p>
+          <h3 class="step-title">Verifica la información</h3>
+          <p class="step-desc">Revisa que todos los datos extraídos sean correctos. Tú tienes la última palabra antes de que el expediente quede listo.</p>
+        </div>
+
+        <div class="step reveal reveal-delay-4">
+          <div class="step-num">
+            <span class="num-label">5</span>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <rect x="4" y="6" width="24" height="22" rx="4" stroke="var(--primary)" stroke-width="2"/>
+              <path d="M4 12h24" stroke="var(--primary)" stroke-width="1.8"/>
+              <path d="M10 4v4M22 4v4" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M10 19l2.5 2.5L22 16" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="step-title">Agenda y solo firma</h3>
+          <p class="step-desc">Con el expediente completo y validado, agenda tu cita con el notario. Solo llegas a firmar. Sin más vueltas.</p>
         </div>
       </div>
     </div>
@@ -1664,7 +1681,7 @@
       <div class="testimonials-header">
         <div class="eyebrow reveal">Testimonios</div>
         <h2 class="section-title reveal reveal-delay-1">Lo que dicen quienes ya lo vivieron</h2>
-        <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">Ciudadanos que completaron su trámite notarial con Expedito, sin estrés y desde su celular.</p>
+        <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">Ciudadanos que completaron su trámite notarial con TuNotariaExpress, sin estrés y desde su celular.</p>
       </div>
 
       <div class="testimonials-grid">
@@ -1676,7 +1693,7 @@
             <svg class="star" viewBox="0 0 16 16" fill="#C47C3E"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
             <svg class="star" viewBox="0 0 16 16" fill="#C47C3E"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
           </div>
-          <p class="testimonial-text">Tenía mucho miedo de hacer el testamento porque pensé que iba a ser un proceso muy complicado. Con Expedito, el asistente me fue explicando todo paso a paso, en lenguaje normal. En 5 días ya tenía cita para firmar. No podía creerlo.</p>
+          <p class="testimonial-text">Tenía mucho miedo de hacer el testamento porque pensé que iba a ser un proceso muy complicado. Con TuNotariaExpress, el asistente me fue explicando todo paso a paso, en lenguaje normal. En 5 días ya tenía cita para firmar. No podía creerlo.</p>
           <div class="testimonial-author">
             <div class="author-avatar" style="background:#F0EAE0;color:var(--primary);">MG</div>
             <div>
@@ -1694,7 +1711,7 @@
             <svg class="star" viewBox="0 0 16 16" fill="#C47C3E"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
             <svg class="star" viewBox="0 0 16 16" fill="#C47C3E"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
           </div>
-          <p class="testimonial-text">Quería abrir mi empresa desde hace un año pero no sabía por dónde empezar con el acta constitutiva. Un amigo me recomendó Expedito. Entré el lunes a la plataforma y el viernes ya tenía todo el expediente listo. Increíble.</p>
+          <p class="testimonial-text">Quería abrir mi empresa desde hace un año pero no sabía por dónde empezar con el acta constitutiva. Un amigo me recomendó TuNotariaExpress. Entré el lunes a la plataforma y el viernes ya tenía todo el expediente listo. Increíble.</p>
           <div class="testimonial-author">
             <div class="author-avatar" style="background:#F5E8D8;color:var(--primary-hover);">RL</div>
             <div>
@@ -1712,7 +1729,7 @@
             <svg class="star" viewBox="0 0 16 16" fill="#C47C3E"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
             <svg class="star" viewBox="0 0 16 16" fill="#C47C3E"><path d="M8 1l1.8 3.6 4 .6-2.9 2.8.7 4L8 10l-3.6 1.9.7-4L2.2 5.2l4-.6z"/></svg>
           </div>
-          <p class="testimonial-text">Vendí mi departamento en Monterrey y el proceso de compraventa siempre me había dado miedo. Con Expedito subí mis documentos a la plataforma y el asistente me avisó en cada paso. Solo fui a la notaría a firmar. Perfecto.</p>
+          <p class="testimonial-text">Vendí mi departamento en Monterrey y el proceso de compraventa siempre me había dado miedo. Con TuNotariaExpress subí mis documentos a la plataforma y el asistente me avisó en cada paso. Solo fui a la notaría a firmar. Perfecto.</p>
           <div class="testimonial-author">
             <div class="author-avatar" style="background:#EDE8E4;color:#5C4030;">JP</div>
             <div>
@@ -1754,13 +1771,13 @@
 
           <div class="faq-item">
             <button class="faq-question">
-              ¿Cuánto cuesta usar Expedito?
+              ¿Cuánto cuesta usar TuNotariaExpress?
               <span class="faq-chevron">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="var(--text)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </span>
             </button>
             <div class="faq-answer">
-              <p>Expedito es gratuito para el ciudadano. Los honorarios notariales son independientes y los fija directamente el notario conforme al arancel del estado correspondiente. Tu notario te informará el costo antes de iniciar. Nunca habrá cargos sorpresa de nuestra parte.</p>
+              <p>TuNotariaExpress es gratuito para el ciudadano. Los honorarios notariales son independientes y los fija directamente el notario conforme al arancel del estado correspondiente. Tu notario te informará el costo antes de iniciar. Nunca habrá cargos sorpresa de nuestra parte.</p>
             </div>
           </div>
 
@@ -1796,7 +1813,7 @@
               </span>
             </button>
             <div class="faq-answer">
-              <p>Absolutamente. Expedito solo te ayuda a recopilar y organizar la información para el expediente. La formalización legal la hace el notario en persona, conforme a la Ley del Notariado de tu estado. La cita de firma en la notaría es el momento en que el documento adquiere plena validez jurídica. La plataforma es solo el canal de preparación, no reemplaza al notario.</p>
+              <p>Absolutamente. TuNotariaExpress solo te ayuda a recopilar y organizar la información para el expediente. La formalización legal la hace el notario en persona, conforme a la Ley del Notariado de tu estado. La cita de firma en la notaría es el momento en que el documento adquiere plena validez jurídica. La plataforma es solo el canal de preparación, no reemplaza al notario.</p>
             </div>
           </div>
 
@@ -1843,7 +1860,7 @@
                 <path d="M8 16v-5h4v5" stroke="#FAF7F2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
-            Expedito
+            TuNotariaExpress
           </a>
           <p>Hacemos que los trámites notariales sean accesibles para todos los mexicanos, sin importar qué tan familiarizados estén con la tecnología o el derecho.</p>
         </div>
@@ -1863,7 +1880,7 @@
         <div class="footer-col">
           <h4>Empresa</h4>
           <ul>
-            <li><a href="#">Sobre Expedito</a></li>
+            <li><a href="#">Sobre TuNotariaExpress</a></li>
             <li><a href="#">Para notarios</a></li>
             <li><a href="#">Prensa</a></li>
             <li><a href="#">Trabaja con nosotros</a></li>
@@ -1883,7 +1900,7 @@
 
       <div class="footer-bottom">
         <div class="footer-copyright">
-          <p>&copy; 2025 Expedito. Todos los derechos reservados. Ciudad de México, México.</p>
+          <p>&copy; 2025 TuNotariaExpress. Todos los derechos reservados. Ciudad de México, México.</p>
           <div class="footer-legal">
             <a href="#">Aviso de privacidad</a>
             <a href="#">Términos de uso</a>
