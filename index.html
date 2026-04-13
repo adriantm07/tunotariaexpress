@@ -396,11 +396,10 @@
     .phone-wrap {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
-      align-items: stretch;
+      justify-content: center;
+      align-items: center;
       gap: 16px;
       position: relative;
-      align-self: stretch;
     }
 
     .phone-glow {
@@ -413,7 +412,7 @@
 
     .platform-mockup {
       width: 100%;
-      flex: 1;
+      max-width: 420px;
       background: #fff;
       border-radius: 20px;
       box-shadow: 0 32px 80px rgba(0,0,0,.22), 0 0 0 1px rgba(255,255,255,.12);
@@ -455,7 +454,7 @@
     .pm-step-line { width: 14px; height: 1px; background: rgba(250,247,242,.18); }
 
     /* === ANIMATED MOCKUP STAGES === */
-    .am-stages { position: relative; min-height: 380px; overflow: hidden; flex: 1; }
+    .am-stages { position: relative; min-height: 340px; overflow: hidden; }
     .am-stage {
       position: absolute; inset: 0; padding: 24px 28px;
       opacity: 0; transform: translateY(10px);
@@ -490,7 +489,7 @@
       border-color: var(--primary); background: #FDF5EE;
       box-shadow: 0 0 0 3px rgba(139,69,19,.08);
     }
-    .tramite-icon { font-size: 1.5rem; margin-bottom: 6px; }
+    .tramite-icon { display: flex; align-items: center; margin-bottom: 8px; }
     .tramite-name { font-size: .8125rem; font-weight: 600; color: var(--text); line-height: 1.2; }
     .tramite-card.selected .tramite-name { color: var(--primary); }
 
@@ -1330,19 +1329,45 @@
                 <div class="am-title">¿Qué trámite necesitas?</div>
                 <div class="tramite-grid">
                   <div class="tramite-card" id="tc-acta">
-                    <div class="tramite-icon">🏢</div>
+                    <div class="tramite-icon">
+                      <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                        <rect x="3" y="3" width="22" height="22" rx="4" stroke="var(--primary)" stroke-width="1.8"/>
+                        <path d="M8 10h12M8 14h8M8 18h6" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"/>
+                        <circle cx="21" cy="19" r="4" fill="#F5E8D8" stroke="var(--secondary)" stroke-width="1.5"/>
+                        <path d="M19.5 19l1 1 2-2" stroke="var(--secondary)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <div class="tramite-name">Acta Constitutiva</div>
                   </div>
                   <div class="tramite-card" id="tc-compra">
-                    <div class="tramite-icon">🏠</div>
+                    <div class="tramite-icon">
+                      <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                        <path d="M4 22V12l10-7 10 7v10" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="10" y="15" width="8" height="7" rx="1" stroke="var(--primary)" stroke-width="1.8"/>
+                        <path d="M1 22h26" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"/>
+                      </svg>
+                    </div>
                     <div class="tramite-name">Compraventa</div>
                   </div>
                   <div class="tramite-card" id="tc-testa">
-                    <div class="tramite-icon">📜</div>
+                    <div class="tramite-icon">
+                      <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                        <path d="M6 4h16v20H6z" stroke="var(--primary)" stroke-width="1.8"/>
+                        <path d="M10 9h8M10 13h8M10 17h5" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"/>
+                        <circle cx="10" cy="9" r="1" fill="var(--secondary)"/>
+                        <circle cx="10" cy="13" r="1" fill="var(--secondary)"/>
+                        <circle cx="10" cy="17" r="1" fill="var(--secondary)"/>
+                      </svg>
+                    </div>
                     <div class="tramite-name">Testamento</div>
                   </div>
                   <div class="tramite-card" id="tc-donacion">
-                    <div class="tramite-icon">🤝</div>
+                    <div class="tramite-icon">
+                      <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+                        <path d="M14 22s-9-5-9-12a6 6 0 0 1 11.7-1.9A6 6 0 0 1 23 10c0 7-9 12-9 12z" stroke="var(--primary)" stroke-width="1.8" stroke-linejoin="round"/>
+                        <path d="M10 13l2.5 2.5L18 10" stroke="var(--secondary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
                     <div class="tramite-name">Donación</div>
                   </div>
                 </div>
@@ -1387,7 +1412,7 @@
               <!-- Etapa 3: OCR escaneando -->
               <div class="am-stage" id="am-stage-3">
                 <div class="am-label">Paso 3 de 4 · Analizando</div>
-                <div class="am-title">Leyendo documentos con OCR</div>
+                <div class="am-title">Leyendo documentos</div>
                 <div class="ocr-doc" id="ocr-doc">
                   <div class="ocr-doc-lines">
                     <div class="ocr-line"></div>
